@@ -1,0 +1,40 @@
+"Maximum points:Points achieved:Percentage reached:"
+inc 20
+
+lit 0
+lit 15
+lit 16
+out 2
+
+la 0 32
+la 0 36
+in 0
+
+lit 15
+lit 16
+lit 17
+out 2
+
+la 0 40
+la 0 44
+in 0
+
+la 0 48
+
+lv 0 40
+lit 100
+mul
+lv 0 32
+div
+sto
+
+lit 31
+lit 19
+lit 20
+out 2
+
+lv 0 48
+lit 1
+out 0
+
+halt
