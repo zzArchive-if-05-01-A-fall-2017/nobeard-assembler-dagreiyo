@@ -1,0 +1,37 @@
+"Enter n:"
+
+inc 12
+
+lit 0
+lit 8
+lit 9
+out 2
+
+la 0 32
+la 0 36
+in 0
+
+
+.start
+la 0 40
+lit 0
+sto
+
+.nextLoop
+la 0 40
+lv 0 40
+lit 1
+add
+sto
+
+lv 0 40
+lit 4
+out 0
+
+lv 0 32
+lv 0 40
+rel 1
+fjmp .nextLoop
+out 3
+jmp .start
+halt
