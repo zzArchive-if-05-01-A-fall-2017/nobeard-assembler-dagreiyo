@@ -1,0 +1,83 @@
+"Enter a number:Negative number!"
+
+inc 8
+
+lit 0
+lit 15
+lit 16
+out 2
+
+la 0 12
+la 0 16
+in 0
+
+lv 0 12
+lit 0
+rel 4
+tjmp .notNegative
+
+lit 15
+lit 16
+lit 17
+out 2
+
+halt
+
+.notNegative
+la 0 20 
+lit 2
+sto
+
+.nextLoop
+lv 0 12
+lv 0 20
+mod
+lit 0
+rel 2
+fjmp .nextPrime
+
+la 0 12
+lv 0 12
+lv 0 20
+div
+sto
+
+lv 0 20
+lit 1
+out 0
+out 3
+
+lv 0 12
+lit 1
+rel 2
+fjmp .nextLoop
+
+halt
+
+.nextPrime
+la 0 20
+lv 0 20
+lit 1
+add
+sto
+
+la 0 24
+lit 1
+sto
+
+la 0 24
+lv 0 24
+lit 1
+add
+sto
+
+lv 0 20
+lv 0 24
+mod
+lit 0
+rel 2
+tjmp .nextPrime
+
+jmp .nextLoop
+
+halt
